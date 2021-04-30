@@ -1,9 +1,36 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    /* background-color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #333;
     color: #f3f3f3; */
-   /* blue #59a5f6 */
-   /* black #0d1117  */
+  /* blue #59a5f6 */
+  /* black #0d1117  */
+}
+/* Registration form */
+.ftco-section {
+  padding: 7em 0;
+}
+.heading-section {
+  font-size: 28px;
+  color: #f3f3f3;
+}
+.img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.wrap {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+.text-wrap,
+.login-wrap {
+  width: 100%;
 }
