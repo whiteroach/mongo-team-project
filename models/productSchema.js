@@ -7,6 +7,7 @@ const newProduct = new schema({
     quantity:Number,
 })
 
-const Product = mongoose.model('Product, newProduct');
+
+const Product = mongoose.model('Product', newProduct);
 
 module.exports = Product;
