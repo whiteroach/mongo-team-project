@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const UserSchema = Schema({
     status:{
-        admin: false
+        admin: Boolean
     },
     name: {
         type: String,
