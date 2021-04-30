@@ -1,5 +1,6 @@
 const { response } = require("express");
 const User = require("../models/UserSchema");
+<<<<<<< HEAD
 const { use } = require("../routes/auth");
 
 const createUser = async (req, res = response) => {
@@ -35,6 +36,26 @@ const createUser = async (req, res = response) => {
   }
 };
 
+=======
+
+const createUser = async (req, res = response) => {
+  try {
+    const user = new User(req.body);
+    await user.save();
+
+    res.status(201).json({
+      ok: true,
+      msg: "register",
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: "unknown error",
+    });
+  }
+};
+
+>>>>>>> e71955660f206dbcc08bd9453c30ebc301528094
 const loginUser = (req, res = response) => {
   const { email, password } = req.body;
   res.json({
@@ -48,4 +69,8 @@ const loginUser = (req, res = response) => {
 module.exports = {
   createUser,
   loginUser,
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> e71955660f206dbcc08bd9453c30ebc301528094
