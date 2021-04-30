@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
-const productRouter = require('./routes/product')
-const Product = require('./models/productSchema')
+const productRouter = require("./routes/product");
+// const Product = require("./models/productSchema");
 
 //settings
 app.use(express.static(__dirname + "/public"));
@@ -29,7 +29,7 @@ app.use(express.json());
 
 //**********ROUTES********* */
 app.use("/", require("./routes/auth"));
-app.use('/product', productRouter)
+app.use("/product", productRouter);
 
 app.listen(PORT, () => {
   `Listen to PORT ${PORT}`;
