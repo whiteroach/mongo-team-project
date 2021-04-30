@@ -16,13 +16,13 @@ const DB_LINK = process.env.DB_LINK + DB_NAME;
 mongoose.connect(DB_LINK, {useUnifiedTopology:true, useNewUrlParser:true})
 .then(()=>{console.log('Mongoose found his way to the database...')})
 .catch(err =>{console.log(err)})
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 
 
 //********BODY PARSER****** */
 app.use(express.json());
 
 //**********ROUTES********* */
-app.use('/', require('./routes/auth'));
+app.use('/', require('./routes/auth')); 
 
 app.listen(PORT, ()=>{`Listen to PORT ${PORT}`})
