@@ -1,6 +1,5 @@
 const { response } = require("express");
 const User = require("../models/UserSchema");
-<<<<<<< HEAD
 const { use } = require("../routes/auth");
 
 const createUser = async (req, res = response) => {
@@ -36,7 +35,6 @@ const createUser = async (req, res = response) => {
   }
 };
 
-=======
 
 const createUser = async (req, res = response) => {
   try {
@@ -55,7 +53,6 @@ const createUser = async (req, res = response) => {
   }
 };
 
->>>>>>> e71955660f206dbcc08bd9453c30ebc301528094
 const loginUser = (req, res = response) => {
   const { email, password } = req.body;
   res.json({
@@ -69,8 +66,4 @@ const loginUser = (req, res = response) => {
 module.exports = {
   createUser,
   loginUser,
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> e71955660f206dbcc08bd9453c30ebc301528094
