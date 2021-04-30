@@ -3,7 +3,8 @@ const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
-// const Product = require("./models/productSchema");
+const PORT = process.env.PORT || 8080;
+const Product = require("./models/productSchema");
 
 //settings
 app.use(express.static(__dirname + "/public"));
@@ -22,7 +23,6 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-const PORT = process.env.PORT || 8080;
 
 //********BODY PARSER****** */
 app.use(express.json());
