@@ -1,0 +1,19 @@
+{
+  "name": "mongo-team-project",
+  "version": "1.0.0",
+  "description": "User Management System",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "P.Simcic, Jose Campos Ashik :)",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "mongoose": "^5.12.7",
+    "nodemon": "^2.0.7"
+  }
+}
