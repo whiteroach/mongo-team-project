@@ -5,7 +5,6 @@ const newProduct = new schema({
     title:String,
     description:String,
     quantity:Number,
-    admin:Boolean,
 })
 
 const Product = mongoose.model('Product, newProduct');
