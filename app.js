@@ -3,6 +3,7 @@ const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
+const authRouter = require("./routes/auth");
 const PORT = process.env.PORT || 8080;
 const Product = require("./models/productSchema");
 
@@ -24,11 +25,14 @@ mongoose
     console.log(err);
   });
 
+app.get("/", (req, res) => {
+  res.render("registration");
+});
 //********BODY PARSER****** */
 app.use(express.json());
 
 //**********ROUTES********* */
-app.use("/", require("./routes/auth"));
+app.use("/newUser", authRouter);
 app.use("/product", productRouter);
 
 app.listen(PORT, () => {

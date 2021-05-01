@@ -1,14 +1,7 @@
 
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Registration Form
-                </h2>
-            </div>
-        </div>
-
-<div class="row justify-content-center">
+<section class="ftco-section pt-4">
+    <div class="container ">
+<div class="row  justify-content-center">
     <div class="col-lg-10">
         <div class="wrap d-md-flex">
             <div class="text-wrap p-4 p-lg-5 d-flex img d-flex align-items-end"
@@ -16,13 +9,13 @@
             >
             <div class="text w-100">
                 <h2 class="mb-4">
-                   Welcome to Registration form
+                   Welcome to JAP !
                 </h2>
                 <p>This is a User Management System Site, where you can add your products, update and remove your products.</p>
             </div>
             </div>
             <div class="login-wrap p-4 p-md-5">
-                <h3 class="mb-3">Create an account</h3>
+                <h3 class="mb-3">Registration form </h3>
             <form action="/newUser" method="POST" class="registration-form">
             
             <div class="row">
@@ -32,7 +25,7 @@
                         <label for="name" class="label">Name</label>
                         <input type="text" class="form-control"
                         name="name"
-                        placeholder="Your Name">
+                        placeholder="First Name">
                     </div>
                 </div>
                 {{!-- Surname --}}
@@ -41,7 +34,7 @@
                         <label for="surname" class="label">Surname</label>
                         <input type="text" class="form-control"
                         name="surname"
-                        placeholder="Your Surname">
+                        placeholder=" Surname">
                     </div>
                 </div>
                 {{!-- Country --}}
@@ -50,7 +43,7 @@
                         <label for="country" class="label">Country</label>
                         <input type="text" class="form-control"
                         name="country"
-                        placeholder="Your Country">
+                        placeholder="Country">
                     </div>
                 </div>
                 {{!-- Address --}}
@@ -59,7 +52,7 @@
                         <label for="address" class="label">Address</label>
                         <input type="text" class="form-control"
                         name="address"
-                        placeholder="Your Address">
+                        placeholder="Address">
                     </div>
                 </div>
                 {{!-- E-mail --}}
@@ -76,18 +69,19 @@
                     <div class="form-group d-flex align-items-center">
                         <label for="password" class="label">Password</label>
                         <input type="password" class="form-control"
-                        name="password">
+                        name="password"
+                        placeholder="Password">
                     </div>
                 </div>
                 {{!-- Terms & agreements --}}
                 <div class="col-md-12 my-4">
                     <div class="form-group">
                         <div class="w-100">
-                            <label class="checkbox-wrap checkbox-primary">
-                                "I agree all statements in terms of service"
-                                <input type="checkbox" checked>
+                               
+                            <label class="checkbox-wrap checkbox-primary w-100">
+                                I agree all statements in terms of service
+                               <input type="checkbox" unchecked>
                                 <span class="checkmark">
-                                    ::after
                                     </span>
                             </label>
                         </div>
@@ -96,15 +90,15 @@
                 {{!-- Button --}}
                 <div class="col-md-12">
                     <div class="form group">
-                        <button type="submit" class="btn btn-secondary submit p-3">Submit</button>
+                        <button type="submit" class="btn btn-secondary submit p-3">Create an account</button>
                     </div>
                 </div>
             </div>
             </form>
             {{!-- Log in for registered members --}}
             <div class="w-100 text-center">
-                <p class="mt-4">
-                    "I'm already a member! "
+                <p class="p mt-4">
+                    I'm already a member!
                     <a href="#login">Log In</a>
                 </p>
             </div>

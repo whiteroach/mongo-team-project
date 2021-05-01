@@ -1,19 +1,26 @@
+/*font style*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #333;
-    color: #f3f3f3; */
+  font-family: "Roboto", sans-serif;
+  /*  color: #f3f3f3; */
   /* blue #59a5f6 */
   /* black #0d1117  */
 }
-/* Registration form */
+body {
+  background-color: #333;
+}
+/*** Registration form start ***/
 .ftco-section {
   padding: 7em 0;
 }
 .heading-section {
   font-size: 28px;
-  color: #f3f3f3;
+  color: #fff;
+  letter-spacing: 1px;
 }
 .img {
   background-size: cover;
@@ -34,18 +41,157 @@
 .login-wrap {
   width: 100%;
 }
+
 .text-wrap {
   position: relative;
   z-index: 0;
 }
 .text-wrap ::after {
-  background: #333;
+  background: #000;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   content: "";
-  opacity: 0.5;
+  opacity: 0.2;
   z-index: -1;
 }
+.text {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px;
+  letter-spacing: 1px;
+}
+.text > h2 {
+  font-weight: 600;
+  color: #f3f3f3;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.login-wrap {
+  position: relative;
+  background: #f3f3f3;
+}
+.login-wrap > h3 {
+  font-weight: 300;
+  line-height: 1.5;
+}
+span {
+  font-size: 16px;
+  display: block;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+}
+.form-group {
+  width: 100%;
+}
+label {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0;
+  width: 150px;
+}
+.form-control {
+  width: calc(100%-150px);
+  height: 50px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+}
+.form-control:focus,
+.form-control:active {
+  outline: none !important;
+  box-shadow: none;
+  border-color: #6807f9;
+  background: rgba(0, 0, 0, 0.05);
+}
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  user-select: none;
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.checkbox-wrap > input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.checkmark::after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  margin-top: -4px;
+}
+.checkbox-primary input:checked ~ .checkmark::after {
+  display: block;
+  content: "\f14a";
+  font-family: "FontAwesome";
+  color: #000;
+}
+.btn {
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 15px;
+  border-radius: 40px;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+.btn-secondary {
+  background: rgb(19, 18, 18) !important;
+  border: 1px solid #000 !important;
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 19px -16px rgba(0, 0, 0, 0.29) !important;
+  -moz-box-shadow: 0px 10px 19px -16px rgba(0, 0, 0, 0.29) !important;
+  box-shadow: 0px 10px 19px -16px rgba(0, 0, 0, 0.29) !important;
+}
+.btn-secondary:hover,
+.btn-outline-black {
+  border: 1px solid #000;
+  background: transparent;
+  background-color: #000 !important;
+}
+.p {
+  color: #808080;
+  font-size: 16px;
+}
+a {
+  transition: 0.3s all ease;
+  color: #6807f9;
+  text-decoration: none !important;
+}
+a:hover,
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none;
+}
+/** Registration form end**/
