@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
+const autentification = require("./routes/auth");
 const productRouter = require("./routes/product");
-const authRouter = require("./routes/auth");
 const PORT = process.env.PORT || 8080;
 const Product = require("./models/productSchema");
 
@@ -32,7 +32,8 @@ app.get("/", (req, res) => {
 app.use(express.json());
 
 //**********ROUTES********* */
-app.use("/newUser", authRouter);
+app.use("/", autentification);
+app.use("/", require("./routes/auth"));
 app.use("/product", productRouter);
 
 app.listen(PORT, () => {
