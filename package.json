@@ -4,10 +4,9 @@
   "description": "User Management System",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "P.Simcic, Jose Campos Ashik :)",
+  "author": "P.Simcic, Jose Campos, Ashik Ahammed:)",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
