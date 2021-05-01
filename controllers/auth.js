@@ -58,6 +58,8 @@ const loginUser = async (req, res = response) => {
   }
 
   //*******GENERATE JSON WEB TOKE***** */
+const loginUser = (req, res = response) => {
+  const { email, password } = req.body;
   res.json({
     ok: true,
     uid: user.id,
@@ -84,4 +86,5 @@ const loginUser = async (req, res = response) => {
 module.exports = {
   createUser,
   loginUser,
+};
 };
