@@ -7,7 +7,7 @@ router.post("/", loginUser);
 router.post("/createdUser", createUser);
 
 module.exports = router; */
-
+// DOWN -->
 // const express = require("express");
 // const router = express.Router();
 // const { createUser, loginUser } = require("../controllers/auth");

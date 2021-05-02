@@ -10,5 +10,21 @@
             <button type="submit">Add</button>
         </form>
     </div>
-    {{!-- {{#if }} --}}
+    <div class="items-container">
+        {{#if product}}
+            {{#each product}}
+                <div class="product-item">
+                    <ul>
+                        <li>Title: {{title}}</li>
+                        <li>Description: {{description}}</li>
+                        <li>Quantity: {{quantity}}</li>
+                    </ul>
+                   
+                    <a class="btn-delete" href="/product/delete/{{_id}}">Delete</a>
+                    <a class="btn-update" href="/product/update/{{_id}}">Update</a>
+
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
 </div>
