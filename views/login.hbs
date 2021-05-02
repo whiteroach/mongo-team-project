@@ -1,5 +1,5 @@
 
-<section class="ftco-section pt-4 col-sm-11 col-md-9 col-lg-7">
+<section class="animate__animated animate__bounceInUp ftco-section pt-4 col-sm-11 col-md-9 col-lg-7">
     <div class="reg-container ">
 <div class="row  justify-content-center">
     <div class="col-lg-10">
@@ -37,12 +37,24 @@
                         placeholder="Password">
                     </div>
                 </div>
-              
+                {{!-- Remember me --}}
+              <div class="col-md-12 my-4">
+                    <div class="form-group">
+                        <div class="w-100">
+                            <label class="checkbox-wrap checkbox-primary w-100">
+                                Remember me
+                               <input type="checkbox" unchecked>
+                                <span class="checkmark">
+                                    </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 {{!-- Button --}}
                 <div class="col-md-12">
                     <div class="form group">
-                        <button type="submit" class="btn btn-secondary submit p-2"
-                        style="border-radius:20px; height:40px; width:80px">Log In</button>
+                        <a type="submit" class="btn btn-secondary submit p-2"
+                        style="border-radius:20px; height:40px; width:80px">Log In</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +63,7 @@
             <div class="w-100 text-center">
                 <p class="p mt-4">
                     I don't have an account!
-                    <a href="/">Sign Up</a>
+                    <a href="/"  class="animate__animated animate__shakeX">Sign Up</a>
                 </p>
             </div>
             </div>
