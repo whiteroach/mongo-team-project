@@ -25,9 +25,15 @@ mongoose
     console.log(err);
   });
 
+// registration form
 app.get("/", (req, res) => {
   res.render("registration");
 });
+
+// login form
+// app.get("/login", (req, res) => {
+//   res.render("login");
+// });
 //********BODY PARSER****** */
 app.use(express.json());
 
