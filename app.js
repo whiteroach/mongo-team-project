@@ -2,10 +2,9 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
-const autentification = require("./routes/auth");
+// const autentification = require("./routes/auth");
 const productRouter = require("./routes/product");
 const PORT = process.env.PORT || 8080;
-
 const Product = require("./models/productSchema");
 
 //settings
@@ -33,7 +32,7 @@ app.get("/", (req, res) => {
 app.use(express.json());
 
 //**********ROUTES********* */
-app.use("/", autentification);
+// app.use("/", autentification);
 // app.use("/", require("./routes/auth"));
 app.use("/product", productRouter);
 
