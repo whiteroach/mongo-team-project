@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 // const autentification = require("./routes/auth");
 const productRouter = require("./routes/product");
 const PORT = process.env.PORT || 8080;
-
 const Product = require("./models/productSchema");
 
 //settings
@@ -26,8 +25,14 @@ mongoose
     console.log(err);
   });
 
+// registration form
 app.get("/", (req, res) => {
   res.render("registration");
+});
+
+// login form
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 //********BODY PARSER****** */
 app.use(express.json());

@@ -13,14 +13,31 @@
 body {
   background-color: #333;
 }
+.logo {
+  width: 200px;
+  height: 80px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.subtitle {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
 /*** Registration form start ***/
 .ftco-section {
   padding: 7em 0;
+  margin: 0 auto;
+  animation: bounceInUp;
+  animation-duration: 1s;
 }
 .heading-section {
   font-size: 28px;
   color: #fff;
   letter-spacing: 1px;
+  animation: bounceInDown;
+  animation-duration: 1s;
 }
 .img {
   background-size: cover;
@@ -73,6 +90,7 @@ body {
   background: #f3f3f3;
 }
 .login-wrap > h3 {
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -182,6 +200,10 @@ label {
 .p {
   color: #808080;
   font-size: 16px;
+  animation: shakeX;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
 }
 a {
   transition: 0.3s all ease;

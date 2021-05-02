@@ -8,12 +8,12 @@ router.post("/createdUser", createUser);
 
 module.exports = router; */
 // DOWN -->
-const express = require("express");
-const router = express.Router();
-const { createUser, loginUser } = require("../controllers/auth");
+// const express = require("express");
+// const router = express.Router();
+// const { createUser, loginUser } = require("../controllers/auth");
 
-router.post("/", loginUser);
+// router.post("/", loginUser);
 
-router.post("/newUser", createUser);
+// router.post("/newUser", createUser);
 
-module.exports = router;
+// module.exports = router;
