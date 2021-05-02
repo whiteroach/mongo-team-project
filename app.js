@@ -31,9 +31,9 @@ app.get("/", (req, res) => {
 });
 
 // login form
-// app.get("/login", (req, res) => {
-//   res.render("login");
-// });
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 //********BODY PARSER****** */
 app.use(express.json());
 
