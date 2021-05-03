@@ -16,7 +16,7 @@
             </div>
             <div class="login-wrap p-4 p-md-5">
                 <h3 class="mb-3">Registration form </h3>
-            <form action="/" method="POST" class="registration-form">
+            <form action="/" method="POST" class="registration-form " novalidate>
             
             <div class="row">
                 {{!-- name --}}
@@ -26,6 +26,8 @@
                         <input type="text" class="form-control"
                         name="name"
                         placeholder="First Name"
+                        required
+                        
                          >
                     </div>
                 </div>
@@ -36,6 +38,7 @@
                         <input type="text" class="form-control"
                         name="surname"
                         placeholder=" Surname"
+                         required
                          >
                     </div>
                 </div>
@@ -66,7 +69,7 @@
                         <input type="email" class="form-control"
                         name="email"
                         placeholder="jospetash03@web.de"
-                         >
+                         required >
                     </div>
                 </div>
                 {{!-- Password --}}
@@ -77,6 +80,7 @@
                         type="password" class="form-control"
                         name="password"
                         placeholder="Password"
+                         required
                         >
                     </div>
                 </div>

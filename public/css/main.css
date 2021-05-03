@@ -30,14 +30,14 @@ body {
   padding: 7em 0;
   margin: 0 auto;
   animation: bounceInUp;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 .heading-section {
   font-size: 28px;
   color: #fff;
   letter-spacing: 1px;
   animation: bounceInDown;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 .img {
   background-size: cover;
@@ -201,9 +201,9 @@ label {
   color: #808080;
   font-size: 16px;
   animation: shakeX;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-iteration-count: 1;
+  animation-duration: 1.2s;
+  animation-delay: 2.5s;
+  /* animation-iteration-count: 2; */
 }
 a {
   transition: 0.3s all ease;
