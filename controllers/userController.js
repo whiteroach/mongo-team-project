@@ -4,24 +4,32 @@ const bcrypt = require('bcryptjs');
 
 
 //To create a new user
-exports.newUser = async (req, res, next) =>{
+exports.newUser =async (req, res, next) =>{
     const user = new User(req.body);
     try{
         await user.save();
-        res.json({message: "the user was added"});
+        res.json({msg: "user added"});
     }catch(error){
         console.log(error);
         next();
     }
-    const salt = bcrypt.genSaltSync();
-        usuario.password = bcrypt.hashSync( password, salt );
+}
 
 
-        await usuario.save();
 
-} 
 
     
+       
+    
+
+    
+
+
+
+
+
+        
+
        
 
 //To get all the users
@@ -65,4 +73,3 @@ exports.deleteUser = async(req, res, next) =>{
         next();
     };
 }
-

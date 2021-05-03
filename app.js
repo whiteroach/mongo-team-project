@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
 const PORT = process.env.PORT || 8080;
 const Product = require("./models/productSchema");
-const userRouter = require('./routes/user')
+const userRouter = require('./routes/user');
 
 //settings
 app.use(express.static(__dirname + "/public"));
