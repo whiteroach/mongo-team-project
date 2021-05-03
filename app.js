@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
-// const autentification = require("./routes/auth");
 const productRouter = require("./routes/product");
 const PORT = process.env.PORT || 8080;
 const Product = require("./models/productSchema");
+const userRouter = require('./routes/user')
 
 //settings
 app.use(express.static(__dirname + "/public"));
