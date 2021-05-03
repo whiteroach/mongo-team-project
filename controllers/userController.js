@@ -1,22 +1,18 @@
 const { request } = require("express");
 const User = require("../models/UserSchema");
-const bcrypt = require("bcryptjs");
 
 //To create a new user
-exports.newUser = async (req, res, next) => {
-  const user = await new User(req.body);
-  try {
-    await user.save();
-    res.json({ message: "the user was added" });
-  } catch (error) {
-    console.log(error);
-    next();
-  }
-  const salt = bcrypt.genSaltSync();
-  user.password = bcrypt.hashSync(password, salt);
-
-  await usuario.save();
-};
+exports.newUser =async (req, res, next) =>{
+    const user = new User(req.body);
+    
+    try{
+        await user.save();
+        res.json({msg: "user added"});
+    }catch(error){
+        console.log(error);
+        next();
+    }
+}
 
 //To get all the users
 exports.getAllUsers = async (req, res, next) => {
