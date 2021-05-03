@@ -4,6 +4,7 @@ const User = require("../models/UserSchema");
 //To create a new user
 exports.newUser =async (req, res, next) =>{
     const user = new User(req.body);
+    
     try{
         await user.save();
         res.json({msg: "user added"});
