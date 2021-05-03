@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 
 //To create a new user
 exports.newUser = async (req, res, next) =>{
-    const user = new User(req.body);
+    const user = await new User(req.body);
     try{
         await user.save();
         res.json({message: "the user was added"});
@@ -14,7 +14,7 @@ exports.newUser = async (req, res, next) =>{
         next();
     }
     const salt = bcrypt.genSaltSync();
-        usuario.password = bcrypt.hashSync( password, salt );
+        user.password = bcrypt.hashSync( password, salt );
 
 
         await usuario.save();
