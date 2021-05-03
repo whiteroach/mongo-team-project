@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
 const PORT = process.env.PORT || 8080;
 const Product = require("./models/productSchema");
-const userRouter = require('./routes/user')
+const userRouter = require("./routes/user");
 
 //settings
 app.use(express.static(__dirname + "/public"));
@@ -36,14 +36,12 @@ app.get("/login", (req, res) => {
 });
 //********BODY PARSER****** */
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 //**********ROUTES********* */
 
-app.use('/', userRouter());
-app.use('/product', productRouter);
-
-
+app.use("/", userRouter());
+app.use("/product", productRouter);
 
 app.listen(PORT, () => {
   `Listen to PORT ${PORT}`;
