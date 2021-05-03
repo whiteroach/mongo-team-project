@@ -6,9 +6,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  /*  color: #f3f3f3; */
-  /* blue #59a5f6 */
-  /* black #0d1117  */
 }
 body {
   background-color: #333;
@@ -30,6 +27,13 @@ body {
   padding: 7em 0;
   margin: 0 auto;
   animation: bounceInUp;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+.product-section {
+  padding: 5em 0;
+  margin: 0 auto;
+  animation: zoomIn;
   animation-duration: 1.5s;
 }
 .heading-section {
@@ -217,3 +221,9 @@ a:focus {
   box-shadow: none;
 }
 /** Registration form end**/
+
+/*Products list start */
+.items-container {
+  width: 60vw;
+  margin: 0 auto;
+}
