@@ -8,10 +8,10 @@ router.post("/", productController.createProducts);
 
 router.get("/delete/:id", productController.deleteProduct);
 
-router.post('/update/:id', productController.updateProduct)
+// router.get("/delete/:id", productController.displayDeleteModal);
 
+router.post("/update/:id", productController.updateProduct);
 
-router.get('/update/:id', productController.displayFormModal)
-
+router.get("/update/:id", productController.displayFormModal);
 
 module.exports = router;

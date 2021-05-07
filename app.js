@@ -4,9 +4,8 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/user");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const Product = require("./models/productSchema");
-
 
 //settings
 app.use(express.static(__dirname + "/public"));

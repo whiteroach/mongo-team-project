@@ -1,24 +1,35 @@
-{{#if user}}
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Email</th>
-            <th>Address</th>
-        </thead>
-        <tbody>
-            {{#each user}}
-              <tr>
-                  <td>{{name}}</td>
-                  <td>{{surname}}</td>
-                  <td>{{email}}</td>
-                  <td>{{address}}</td>
-                  <td><a href="/users/delete/{{_id}}">delete</a></td>
-              </tr> 
-            {{/each}} 
-        </tbody>
-    </table>
-{{/if}}   
-{{#if message}}
-<p>{{deleteMsg}}</p>
+
+ {{!-- Show all Users --}}
+     <div class="animate__animated  animate__bounceInUp productlist-container sm-col md-row col-sm-11 col-md-10 col-lg-6">
+
+{{!-- if condition --}}
+ {{#if user === admin}}
+<table class="table table-hover"style="text-align:center">
+    <tr >
+        <th>Name</th>
+        <th>Surname</th>
+        <th>E-mail</th>
+        <th>Address</th> 
+        <th>Options</th> 
+    </tr>
+     {{#each user}}
+    <tr>
+    <td style="text-transform: capitalize">{{name}} </td>
+    <td>{{surname}} </td>
+    <td>{{email}} </td>
+    <td>{{address}} </td>
+    <td> <a class="btn btn-warning mr-2" href="/product/update/{{_id}}">Update</a>
+        <a class="btn btn-danger ml-2" href="/product/delete/{{_id}}">Delete</a>
+    </td>
+    </tr>
+    {{/each}}
+</table>
+{{else}}
+ <tr>
+    <td style="text-transform: capitalize">{{name}} </td>
+    <td>{{surname}} </td>
+    <td>{{email}} </td>
+    <td>{{address}} </td>
+ </tr>
 {{/if}}
+     </div>
