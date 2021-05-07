@@ -25,22 +25,22 @@ mongoose
     console.log(err);
   });
 
-// registration form
-app.get("/", (req, res) => {
-  res.render("registration");
-});
+// // registration form
+// app.get("/", (req, res) => {
+//   res.render("registration");
+// });
 
-// login form
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+// // login form
+// app.get("/login", (req, res) => {
+//   res.render("login");
+// });
 //********BODY PARSER****** */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //**********ROUTES********* */
 
-app.use("/", userRouter());
+app.use("/", userRouter);
 app.use("/product", productRouter);
 
 app.listen(PORT, () => {
