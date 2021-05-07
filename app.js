@@ -40,6 +40,10 @@ app.use(
 //********BODY PARSER****** */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// Error handling
+app.get("*", (req, res) => {
+  res.render("error");
+});
 
 //**********ROUTES********* */
 
