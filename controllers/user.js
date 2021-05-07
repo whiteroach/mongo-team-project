@@ -1,5 +1,7 @@
 const User = require("../models/UserSchema");
 const url = require('url')
+const bcrypt = require('bcrypt')
+
 exports.getAllUsers = (req,res) => {
     User.find((err,data) => {
         if(err) throw err;
@@ -8,7 +10,11 @@ exports.getAllUsers = (req,res) => {
 }
 
 exports.registration = (req,res) =>{
-    res.render('registration')
+    let msg = '';
+    if(req.query.msg){
+        msg = req.query.msg
+    }
+    res.render('registration', {msg})
 }
 exports.displayLogin = (req,res) => {
     res.render('login')
@@ -18,7 +24,14 @@ exports.newUser = (req,res) => {
     const newUser = new User(req.body);
     newUser.save().then()
     res.redirect('/login')
-
+    User.findOne({email:req.body.email}, (err, data)=>{
+        if(data !== null){
+            res.render('registration',{msg: 'email already in use!'})
+        }else{
+            const userPsw = req.body.password;
+            const saltRound = 
+        }
+    })
 }
 
 exports.deleteUser = (req,res) => {
