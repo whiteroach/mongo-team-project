@@ -16,6 +16,9 @@
             </div>
             <div class="login-wrap p-4 p-md-5">
                 <h3 class="mb-3">Log In</h3>
+            {{#if msg}}
+                <div class="alert alert-danger">{{msg}} </div>
+            {{/if}}   
             <form action="/login" method="POST" class="login-form">
             
             <div class="row">               
@@ -53,8 +56,8 @@
                 {{!-- Button --}}
                 <div class="col-md-12">
                     <div class="form group">
-                        <a href="/product"type="submit" class="btn btn-secondary submit p-2"
-                        style="border-radius:20px; height:40px; width:80px">Log In</a>
+                        <button type="submit" class="btn btn-secondary submit p-2"
+                        style="border-radius:20px; height:40px; width:80px">Log In</button>
                     </div>
                 </div>
             </div>
