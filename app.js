@@ -4,9 +4,8 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/user");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const Product = require("./models/productSchema");
-
 
 //settings
 app.use(express.static(__dirname + "/public"));
@@ -47,3 +46,8 @@ app.use("/product", productRouter);
 app.listen(PORT, () => {
   `Listen to PORT ${PORT}`;
 });
+
+// .evn
+// PORT = 8080
+// DB_NAME = mongoteamproject
+// MONGO_LINK = mongodb+srv://admin:ashik005@akc5.tmtxv.mongodb.net/
