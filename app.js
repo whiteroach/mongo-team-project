@@ -46,8 +46,3 @@ app.use("/product", productRouter);
 app.listen(PORT, () => {
   `Listen to PORT ${PORT}`;
 });
-
-// .evn
-// PORT = 8080
-// DB_NAME = mongoteamproject
-// MONGO_LINK = mongodb+srv://admin:ashik005@akc5.tmtxv.mongodb.net/
