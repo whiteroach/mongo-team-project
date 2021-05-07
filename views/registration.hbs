@@ -16,6 +16,9 @@
             </div>
             <div class="login-wrap p-4 p-md-5">
                 <h3 class="mb-3">Registration form </h3>
+            {{#if msger}}
+                <div class="alert alert-danger">{{msger}}</div>
+            {{/if}}
             <form action="/" method="POST" class="registration-form " novalidate>
             
             <div class="row">
@@ -26,10 +29,16 @@
                         <input type="text" class="form-control"
                         name="name"
                         placeholder="First Name"
+
                         required
-                        
+                        value = {{{input.name}}}
                          >
                     </div>
+
+                    {{#if msg.name}}
+                        <div class="alert alert-danger">{{msg.name}}
+                        </div>
+                    {{/if}}
                 </div>
                 {{!-- Surname --}}
                   <div class="col-md-12">
@@ -39,6 +48,7 @@
                         name="surname"
                         placeholder=" Surname"
                          required
+                         value = {{{input.surname}}}
                          >
                     </div>
                 </div>
@@ -49,6 +59,7 @@
                         <input type="text" class="form-control"
                         name="country"
                         placeholder="Country"
+                        value = {{{input.country}}}
                         >
                     </div>
                 </div>
@@ -59,6 +70,7 @@
                         <input type="text" class="form-control"
                         name="address"
                         placeholder="Address"
+                        value = {{{input.address}}}
                          >
                     </div>
                 </div>
@@ -69,8 +81,13 @@
                         <input type="email" class="form-control"
                         name="email"
                         placeholder="jospetash03@web.de"
-                         required >
+                         required 
+                         value = {{{input.email}}}>
                     </div>
+                     {{#if msg.email}}
+                        <div class="alert alert-danger">{{msg.email}}
+                        </div>
+                    {{/if}}
                 </div>
                 {{!-- Password --}}
                   <div class="col-md-12">
@@ -81,8 +98,13 @@
                         name="password"
                         placeholder="Password"
                          required
+                         value = {{{input.password}}}
                         >
                     </div>
+                     {{#if msg.password}}
+                        <div class="alert alert-danger">{{msg.password}}
+                        </div>
+                    {{/if}}
                 </div>
                 {{!-- Terms & agreements --}}
                 <div class="col-md-12 my-4">

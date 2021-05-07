@@ -3,8 +3,10 @@ const Schema = mongoose.Schema;
 // const bcrypt = require('bcryptjs');
 
 const UserSchema = Schema({
-  status: {
-    admin: Boolean,
+  role: {
+    type: String,
+
+    default: "user",
   },
   name: {
     type: String,
@@ -41,6 +43,5 @@ const UserSchema = Schema({
 //   this.password = await bcrypt.hash(this.password, salt);
 //   next();
 // })
-
 
 module.exports = mongoose.model("User", UserSchema);
