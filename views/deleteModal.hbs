@@ -1,2 +1,29 @@
+<h2 class="animate__animated  animate__bounceInDown heading-section text-center mt-3"><img src="/images/logo.png" class="logo"alt="JAP logo"> <span class="subtitle mt-2">User Management System</span> 
+    </h2>
+
 {{!-- <h3>Are you sure to delete this product ?</h3>
 <a href="/product/delete/{{product._id}} " class="btn btn-danger p-3" >Delete</a> --}}
+
+<div class="delete-container">
+    <div class="row justify-content-center" >
+   <div class="col-sm-8 col-md-6 col-lg-4">
+       <div class="wrap pt-5">
+           <div class="header text-center mt-4">
+       <h2>Are you sure !</h2>
+       <p>This product will be permanently deleted. </p>
+
+       </div>
+       </div>
+     
+       {{!-- Button --}}
+                <div class="col-md-12">
+                    <div class="form group">
+                        <button action="/product/delete/{{product._id}}" type="submit" class="btn btn-secondary submit p-3 mt-3"
+                       >Delete product</button>
+                    </div>
+                </div>
+   </div>
+  
+</div>
+ 
+    </div>

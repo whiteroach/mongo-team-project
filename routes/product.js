@@ -1,17 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const productController = require("../controllers/product");
+const auth = require("../config/auth");
 
-router.get("/", productController.displayProduct);
+// Display Products
+router.get("/", auth.permission, productController.displayProduct);
 
-router.post("/", productController.createProducts);
+// Create new product
+router.post("/", auth.permission, productController.createProducts);
 
-router.get("/delete/:id", productController.deleteProduct);
+// Delete product
+router.get("/delete/:id", auth.permission, productController.deleteProduct);
 
-// router.get("/delete/:id", productController.displayDeleteModal);
+// Display delete modal
+router.get("/delete/:id", productController.displayDeleteModal);
 
-router.post("/update/:id", productController.updateProduct);
+// Update product
+router.post("/update/:id", auth.permission, productController.updateProduct);
 
-router.get("/update/:id", productController.displayFormModal);
+// Display update form
+router.get("/update/:id", auth.permission, productController.displayFormModal);
 
 module.exports = router;

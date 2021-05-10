@@ -15,17 +15,26 @@ exports.registration = (req, res) => {
     msger = req.query.msger;
   }
 
-  res.render("registration");
+  res.render("registration", { msger });
 };
 
 exports.register = (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, surname, country, address, email, password } = req.body;
   const error = {};
   if (name == "") {
     error.name = "Name is required!";
   }
+  if (surname == "") {
+    error.surname = "Surname is required!";
+  }
+  if (country == "") {
+    error.country = "Country is required!";
+  }
+  if (address == "") {
+    error.address = "Address is required!";
+  }
   if (email == "") {
-    error.email = "Email is required!";
+    error.email = "E-mail is required!";
   }
   if (password == "") {
     error.password = "Password is required!";
@@ -33,7 +42,7 @@ exports.register = (req, res) => {
   if (name == "" || email == "" || password == "") {
     req.session.input = req.body;
     // console.log(req.body, error)
-    console.log(req.input);
+    // console.log(req.input);
     return res.render("registration", {
       msg: error,
       input: req.session.input,
@@ -43,12 +52,14 @@ exports.register = (req, res) => {
   User.findOne({ name: req.body.name }, (err, data) => {
     // check name
     if (data !== null) {
-      res.render("registration", { msger: "This account is already exist!" });
+      res.render("registration", {
+        msger: "This user already exist ! Try again.",
+      });
     } else {
       User.findOne({ email: req.body.email }, (err, doc) => {
         if (data !== null) {
           res.render("registration", {
-            msger: "This account is already exist!",
+            msger: "This user already exist ! Try again.",
           });
         } else {
           const userPassword = req.body.password;
@@ -88,7 +99,13 @@ exports.login = (req, res) => {
       bcrypt.compare(req.body.password, data.password, (err, result) => {
         if (result) {
           req.session.user = data;
-          res.redirect("/product");
+          const user = req.session.user;
+          res.redirect(
+            url.format({
+              pathname: "/product",
+              query: { user: user.name },
+            })
+          );
         } else {
           res.render("login", {
             msg: "Password is incorrect! Please enter a valid password",
@@ -103,7 +120,16 @@ exports.updateUser = (req, res) => {
   const userId = req.params.id;
   console.log(userId, req.body);
   Product.findByIdAndUpdate(userId, req.body, { new: true }, (err, doc) => {
-    console.log(doc);
+    console.log("Updated :", doc);
+    res.redirect("/users");
+  });
+};
+
+exports.deleteUser = (req, res) => {
+  const userId = req.params.id;
+  console.log(userId, req.body);
+  Product.findByIdAndDelete(userId, req.body, { new: true }, (err, doc) => {
+    console.log("Deleted :", doc);
     res.redirect("/users");
   });
 };

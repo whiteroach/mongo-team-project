@@ -1,120 +1,145 @@
-<nav class="navBar col-sm-11 col-md-9 col-lg-6 ">
-    <ul class="col d-flex justify-content-around align-items-center">
-        <li>
-            <a href="/users" class="navicon"><i class="fas fa-user"></i>Users
-            </a>
-        </li>
-        <li>
-                  
-            <a href="/logout" class="navicon"> <i class="fas fa-sign-out-alt"></i>Log Out</a>
-        </li>
-    </ul>
+<h2 class="animate__animated  animate__bounceInDown heading-section text-center mt-3"><img src="/images/logo.png" class="logo"alt="JAP logo"> <span class="subtitle mt-2">User Management System</span> 
+    </h2>
+<nav class="animate_animated animate__fadeInLeft navBar col-sm-10 col-md-9 col-lg-6">
+  <ul class=" col d-flex justify-content-around align-items-center">
+    <li>
+      <a href="/users" class="navicon"><i class="fas fa-user"></i>Users </a>
+    </li>
+    <li>
+      <a href="/logout" class="navicon">
+        <i class="fas fa-sign-out-alt"></i>Log Out</a
+      >
+    </li>
+  </ul>
 </nav>
-<section class="animate__animated animate__zoomIn product-section pt-4 col-sm-11 col-md-9 col-lg-7">
-    <div class="product-container">
-<div class="row  justify-content-center">
-    <div class="col-lg-10">
+<section
+  class="animate__animated animate__fadeInRight product-section pt-4 col-sm-11 col-md-9 col-lg-7"
+>
+  <div class="product-container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
         <div class="wrap d-md-flex">
-            <div class="text-wrap p-4 p-lg-5 d-flex img d-flex align-items-end"
-            style="background-image: url(images/product1.jpg);"
-            >
-            <div class="text  w-100">
-                <h2 class="mb-4">
-                   Add Products
-                   <i class="fas fa-list"></i>
-                </h2>
-                   {{!-- <i class="fas fa-sign-out-alt">Log Out</i> --}}
+          <div
+            class="text-wrap p-4 p-lg-5 d-flex img d-flex align-items-end"
+            style="background-image: url(images/product1.jpg)"
+          >
+            <div class="text w-100">
+              {{#if msg}}
+              <h2 class="mb-4">Welcome 
+                  {{ msg.user }} </h2>
+              {{/if}}
 
-                <p>Just fill up the products data and add your products.</p>
+              <p>To add your products fill up the product details form and click the 'Add product' button.</p>
             </div>
-            </div>
-            <div class="login-wrap p-4 p-md-5">
-                <h3 class="mb-3">Product Details</h3>
+          </div>
+
+          <div class="login-wrap p-4 p-md-5">
+            <h3 class="mb-3">Product Details</h3>
             <form action="/product" method="POST" class="product-form">
-            
-            <div class="row">               
+              <div class="row">
                 {{!-- Title --}}
-                  <div class="col-md-12">
-                    <div class="form-group d-flex align-items-center" >
-                        <label for="title" class="label">Title</label>
-                        <input type="text" class="form-control"
-                        name="title"
-                        placeholder="Title"
-                         style="text-transform: capitalize;">
-                    </div>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label for="title" class="label">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="title"
+                      placeholder="Title"
+                      style="text-transform: capitalize"
+                    />
+                  </div>
                 </div>
                 {{!-- Discount--}}
-                  <div class="col-md-12">
-                    <div class="form-group d-flex align-items-center">
-                        <label for="discount" class="label">Discount(%) </label>
-                        <input type="number" class="form-control"
-                        name="discount"
-                        placeholder="Discount">
-                    </div>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label for="discount" class="label">Discount(%) </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="discount"
+                      placeholder="Discount"
+                    />
+                  </div>
                 </div>
-                  {{!-- Quantity--}}
-                  <div class="col-md-12">
-                    <div class="form-group d-flex align-items-center">
-                        <label for="quantity" class="label">Quantity</label>
-                        <input type="number" class="form-control"
-                        name="quantity"
-                        placeholder="Quantity">
-                    </div>
+                {{!-- Quantity--}}
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label for="quantity" class="label">Quantity</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="quantity"
+                      placeholder="Quantity"
+                    />
+                  </div>
                 </div>
-                 {{!-- Price--}}
-                  <div class="col-md-12">
-                    <div class="form-group d-flex align-items-center">
-                        <label for="price" class="label">Price(€) </label>
-                        <input type="number" class="form-control"
-                        name="price"
-                        placeholder="Price">
-                    </div>
+                {{!-- Price--}}
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label for="price" class="label">Price(€) </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="price"
+                      placeholder="Price"
+                    />
+                  </div>
                 </div>
-              
+
                 {{!-- Button --}}
                 <div class="col-md-12">
-                    <div class="form group">
-                        <button type="submit" class="btn btn-secondary submit p-3 mt-3"
-                       >Add product</button>
-                    </div>
+                  <div class="form group">
+                    <button
+                      type="submit"
+                      class="btn btn-secondary submit p-3 mt-3"
+                    >
+                      Add product
+                    </button>
+                  </div>
                 </div>
-            </div>
+              </div>
             </form>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-    </div>
+  </div>
   {{!--container end --}}
 </section>
 
- {{!-- Show all Products --}}
-     <div class="animate__animated  animate__bounceInUp productlist-container sm-col md-row col-sm-11 col-md-10 col-lg-6">
-
-{{!-- if condition --}}
- {{#if product}}
-<table class="table table-hover"style="text-align:center">
-    <tr >
-        <th>Title</th>
-        <th>Discount(%)</th>
-        <th>Quantity</th>
-        <th>Price(€) </th> 
-        <th>Options</th> 
-    </tr>
-     {{#each product}}
+{{!-- Show all Products --}}
+<div
+  class="animate__animated animate__bounceInUp productlist-container sm-col md-row col-sm-11 col-md-10 col-lg-6"
+>
+  {{!-- if condition --}}
+  {{#if product}}
+  <table class="table table-hover" style="text-align: center">
     <tr>
-    <td style="text-transform: capitalize">{{title}} </td>
-    <td>{{discount}} </td>
-    <td>{{quantity}} </td>
-    <td>{{price}} </td>
-    <td> <a class="btn btn-warning mr-2" href="/product/update/{{_id}}">Update</a>
-        <a class="btn btn-danger ml-2" href="/product/delete/{{_id}}">Delete</a>
-    </td>
+      <th>Title</th>
+      <th>Discount(%)</th>
+      <th>Quantity(pcs)</th>
+      <th>Price(€)</th>
+      <th>Options</th>
+    </tr>
+    {{#each product}}
+    <tr>
+      <td style="text-transform: capitalize">{{ title }}</td>
+      <td>{{ discount }}%</td>
+      <td>{{ quantity }}</td>
+      <td>{{ price }}€</td>
+      <td>
+        <a class="btn btn-warning mr-2 " href="/product/update/{{ _id }}"
+          >Update</a
+        >
+        <a class="btn btn-danger ml-2 mt-sm-2 mt-md-0" href="/product/delete/{{ _id }}"
+          >Delete</a
+        >
+      </td>
     </tr>
     {{/each}}
-</table>
-{{else}}
-<h5 class="mb-3 text-center">Your list is empty !</h5>
-{{/if}}
-     </div>
-
+  </table>
+  {{else}}
+  <h5 class="mb-3 text-center">Product list is empty !</h5>
+  {{/if}}
+</div>

@@ -32,14 +32,14 @@ app.use(
     secret: process.env.MY_SECRET,
     cookie: {
       // set the time for session
-      maxAge: 1000, // 1minute
+      maxAge: 3600000, // 1hr
       // expires: new Date(Date.now()+36000)
     },
   })
 );
 //********BODY PARSER****** */
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 //**********ROUTES********* */
 app.use("/", userRouter);

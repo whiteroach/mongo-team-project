@@ -30,24 +30,28 @@ body {
   margin: 2em auto;
   box-shadow: 5px 10px 20px #000;
   border-radius: 5px;
+  animation: fadeInLeft;
+  animation-duration: 1.8s;
 }
 nav ul {
   list-style-type: none;
 }
 .navicon {
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 60px;
   letter-spacing: 1px;
   font-weight: 300;
 }
 .navicon:hover {
   color: #f97407;
-  font-size: 22px;
-  transition: 0.5s all;
+  /* font-size: 20px; */
+  transition: 0.2s all;
+  /* border-bottom: 1px solid #000; */
 }
 /*** Registration form start ***/
-.ftco-section {
+.ftco-section,
+.update-section {
   padding: 7em 0;
   margin: 0 auto;
   animation: bounceInUp;
@@ -57,7 +61,7 @@ nav ul {
 .product-section {
   padding: 4em 0;
   margin: 0 auto;
-  animation: zoomIn;
+  animation: fadeInRight;
   animation-duration: 1.8s;
 }
 .heading-section {
@@ -65,7 +69,7 @@ nav ul {
   color: #fff;
   letter-spacing: 1px;
   animation: bounceInDown;
-  animation-duration: 1.5s;
+  animation-duration: 1.8s;
 }
 .img {
   background-size: cover;
@@ -236,10 +240,14 @@ label {
 a {
   transition: 0.3s all ease;
   color: #6807f9;
+  font-size: 18px;
   text-decoration: none !important;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 a:hover,
 a:focus {
+  color: #f97407;
   text-decoration: none !important;
   outline: none !important;
   box-shadow: none;
@@ -252,7 +260,7 @@ a:focus {
   margin: 0 auto;
   border-radius: 5px;
   animation: bounceInUp;
-  animation-duration: 1.5s;
+  animation-duration: 1.8s;
   opacity: 0.9;
   background-color: #f3f3f3;
 }
@@ -267,4 +275,8 @@ h5 {
   height: 40px;
   letter-spacing: 1px;
   line-height: 40px;
+}
+.homeLink,
+.header {
+  color: #f3f3f3;
 }

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/user");
+const auth = require("../config/auth");
 
 //REGISTRATION
 //show registration page
@@ -10,14 +11,14 @@ router.post("/", userController.register);
 
 //LOGIN
 //show login page
-router.get("/login", userController.displayLogin);
+router.get("/login", auth.checkLogin, userController.displayLogin);
 //login
 router.post("/login", userController.login);
 
 //LOGOUT
 router.get("/logout", (req, res) => {
   delete req.session.user;
-  res.redirect("/");
+  res.redirect("/login");
 });
 //Update user by ID
 router.put("/users/:id", userController.updateUser);
